@@ -1,34 +1,53 @@
-rend_trib = float(input('Informe o Salario Bruto Anual: '))
-rend_isent = float(input('Informe os Gastos Isento Anual: '))
-imp_retid = float(input('Informe o Quanto de Imposto foi Descontado Anual: '))
+renda = float(input('Informe o Salario Bruto Anual: ')) 
+retido = float(input('Informe o Quanto de Imposto foi Descontado Anual: '))
 
-rend_trib = 0
-imp_retid = 0
+renda = 0
+isento = 0
 
-if rend_trib <= 33912:
-    aliquota = 0
-    deducao = 0
-    imp_devido = (rend_trib * aliquota) - deducao
 
-elif rend_trib <= 45012:
+
+if renda <= 29145.60:
+    aliquota = 0.0
+    deducao = 0.0
+    devido = (renda * aliquota) - deducao
+
+elif renda <= 33919.80:
     aliquota = 0.075
-    deducao = 2543.40
-    imp_devido = (rend_trib * aliquota) - deducao
+    deducao = 2185.92
+    devido = (renda * aliquota) - deducao
 
-elif rend_trib <= 67008:
+elif renda <= 45012.60:
     aliquota = 0.15
-    deducao = 5919.30
-    imp_devido = (rend_trib * aliquota) - deducao
+    deducao = 4729.91
+    devido = (renda * aliquota) - deducao
 
-elif rend_trib <= 88848:
+elif renda <= 55976.16:
     aliquota = 0.225
-    deducao = 10944.90
-    imp_devido = (rend_trib * aliquota) - deducao
+    deducao = 8105.85
+    devido = (renda * aliquota) - deducao
 
 else:
     aliquota = 0.275
-    deducao = 15387.30
-    imp_devido = (rend_trib * aliquota) - deducao
+    deducao = 10904.85
+    devido = (renda * aliquota) - deducao
 
-diferenca = imp_devido - rend_trib
+diferenca = retido - devido
 
+
+
+print(devido)
+print(diferenca)
+
+
+
+
+ ##       if diferenca < 0:
+    ##        restituicao = -diferenca
+    ##        print(restituicao)
+
+    ##    elif diferenca > 0:
+    ##        print(f'Voce tem que pagar {diferenca}')    
+
+   ##     else:
+  ##          print('inexistente')        
+ ##
