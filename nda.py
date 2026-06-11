@@ -38,7 +38,17 @@ diferenca = retido - devido
 print(devido)
 print(diferenca)
 
-
+##texto = input("Texto: ")
+chave = int(input("Chave: ")) % 26
+resultado = ""
+for c in texto:
+    if 'A' <= c <= 'Z':
+        resultado += chr((ord(c) - 65 + chave) % 26 + 65)
+    elif 'a' <= c <= 'z':
+        resultado += chr((ord(c) - 97 + chave) % 26 + 97)
+    else:
+        resultado += c
+print("Criptografado:", resultado)
 
 
  ##       if diferenca < 0:
